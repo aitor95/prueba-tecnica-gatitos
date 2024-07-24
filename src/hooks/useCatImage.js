@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { getImage } from '../services/getImage'
 
 export function useCatImage ({ fact }) {
   const [imageURL, setImageURL] = useState('')
@@ -6,12 +7,7 @@ export function useCatImage ({ fact }) {
   useEffect(() => {
     if (!fact) return
 
-    fetch('https://api.thecatapi.com/v1/images/search')
-      .then(response => response.json())
-      .then(data => {
-        const { url } = data[0]
-        setImageURL(url)
-      })
+    getImage().then(url => setImageURL(url))
   }, [fact])
 
   return { imageURL }

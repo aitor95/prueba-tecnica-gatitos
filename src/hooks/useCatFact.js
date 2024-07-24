@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getFact } from '../services/facts'
+import { getFact } from '../services/getFact'
 
 export function useCatFact () {
   const [fact, setFact] = useState('')
