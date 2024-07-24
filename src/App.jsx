@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getFact } from './services/facts'
-import { useCatImage } from './components/hooks/useCatImage'
+import { useCatImage } from './hooks/useCatImage'
 import '../style.css'
 
 export function App () {
