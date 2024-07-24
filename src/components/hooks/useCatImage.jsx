@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export function useImage ({ fact }) {
+export function useCatImage ({ fact }) {
   const [imageURL, setImageURL] = useState('')
 
   useEffect(() => {

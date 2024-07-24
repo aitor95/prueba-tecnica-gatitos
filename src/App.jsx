@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { getFact } from './services/facts'
-import { useImage } from './components/hooks/useImage'
+import { useCatImage } from './components/hooks/useCatImage'
 import '../style.css'
 
 export function App () {
   const [fact, setFact] = useState('')
-  const { imageURL } = useImage({ fact })
+  const { imageURL } = useCatImage({ fact })
 
   useEffect(() => {
     getFact().then(newFact => setFact(newFact))
