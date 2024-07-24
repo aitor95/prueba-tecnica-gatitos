@@ -1,20 +1,12 @@
-import { useEffect, useState } from 'react'
-import { getFact } from './services/facts'
-import { useCatImage } from './hooks/useCatImage'
+import { useCatImage } from './hooks/useCatImage.js'
+import { useCatFact } from './hooks/useCatFact.js'
 import '../style.css'
 
 export function App () {
-  const [fact, setFact] = useState('')
+  const { fact, refreshFact } = useCatFact()
   const { imageURL } = useCatImage({ fact })
 
-  useEffect(() => {
-    getFact().then(newFact => setFact(newFact))
-  }, [])
-
-  const handleClick = async () => {
-    const newFact = await getFact()
-    setFact(newFact)
-  }
+  const handleClick = async () => refreshFact()
 
   return (
     <main>
