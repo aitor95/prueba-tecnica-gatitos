@@ -2,7 +2,6 @@
 
 APIs:
 - Facts Random: https//catfact.ninja/fact
-- Images random: https://cataas.com/cat/says/hello
+- Images random: https://api.thecatapi.com/v1/images/search
 
-Recupera un hecho aleatorio de gatos de la primera API y muestra una imagen de un
-gato con la primera palabra del hecho recuperado en la segunda API.
+Muestra un hecho aleatorio y una imagen aleatoria extraída de la API de catfact.ninja
